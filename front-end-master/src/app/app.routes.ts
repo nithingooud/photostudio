@@ -1,4 +1,4 @@
-import { Router, RouterModule, Routes } from '@angular/router';
+import { ExtraOptions, Router, RouterModule, Routes } from '@angular/router';
 import { LoginPageComponent } from '../components/login-page/login-page.component';
 import { RegisterPageComponent } from '../components/register-page/register-page.component';
 import { HomePageComponent } from '../components/home-page/home-page.component';
@@ -22,9 +22,13 @@ export const routes: Routes = [
       component:HomePageComponent
     }
 ];
+const routerOptions: ExtraOptions = {
+  anchorScrolling: "enabled"
+  //scrollPositionRestoration: "enabled"
+};
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes,routerOptions)],
     exports: [RouterModule],
   })
   export class AppRoutingModule {
