@@ -1,6 +1,6 @@
+
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import {  Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -11,6 +11,7 @@ export class LoginPageComponent {
   constructor(private router:Router){
 
   }
+  public hide:boolean = false
   login(){
     this.router.navigate(['/homepage'])
   }
