@@ -11,8 +11,13 @@ export class LoginPageComponent {
   constructor(private router:Router){
 
   }
+  public email:string = '';
+  public pass:string = '';
   public hide:boolean = false
   login(){
     this.router.navigate(['/homepage'])
+  }
+  registerPage(){
+    this.router.navigate(['/register'])
   }
 }
